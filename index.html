@@ -1,195 +1,815 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zhao-Qing Lin — Personal Website</title>
-  <meta name="description" content="Portfolio, projects, and CV." />
-  <meta property="og:title" content="Zhao-Qing Lin" />
-  <meta property="og:description" content="Portfolio, projects, and CV." />
-  <meta property="og:type" content="website" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  
-  <style>
-    :root {
-      --bg: #0b0d12;
-      --panel: #121621;
-      --text: #e8ecf1;
-      --muted: #a3adbd;
-      --brand: #6aa2ff;
-      --brand-2: #8ef0c3;
-      --border: #1f2736;
-      --shadow: 0 8px 24px rgba(0,0,0,0.35);
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--text);
-      background: linear-gradient(180deg, #0b0d12 0%, #0e1420 60%, #0b0d12 100%);
-      line-height: 1.6;
-    }
-    a { color: var(--brand); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
-    header.site {
-      position: sticky; top: 0; z-index: 10;
-      backdrop-filter: blur(8px);
-      background: rgba(11,13,18,0.6);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
-    .brand { font-weight: 700; letter-spacing: .4px; }
-    .nav a { margin-left: 16px; font-size: 14px; color: var(--muted); }
-    .nav a:hover { color: var(--text); }
+  <title>Mengqing Wu</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
 
-    .hero { padding: 72px 0 32px; }
-    .hero-card {
-      background: linear-gradient(180deg, var(--panel), #0f1320);
-      border: 1px solid var(--border);
-      border-radius: 18px; padding: 28px; box-shadow: var(--shadow);
-    }
-    .hero h1 { margin: 0 0 6px; font-size: 36px; letter-spacing: .3px; }
-    .hero p { margin: 0; color: var(--muted); }
-    .badges { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .badge { font-size: 12px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); color: var(--muted); }
+  <!-- Favicons -->
+  <link href="assets/img/mw-logo.jpg" rel="icon">
+  <link href="assets/img/mw-logo.jpg" rel="apple-touch-icon">
 
-    section { padding: 38px 0; }
-    h2 { margin: 0 0 16px; font-size: 22px; letter-spacing: .2px; }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
 
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .card {
-      grid-column: span 12;
-      background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 18px; box-shadow: var(--shadow);
-    }
-    .card h3 { margin: 0 0 8px; font-size: 18px; }
-    .card p { margin: 0; color: var(--muted); }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
 
-    @media (min-width: 720px) {
-      .hero h1 { font-size: 44px; }
-      .card.thirds { grid-column: span 4; }
-      .card.halves { grid-column: span 6; }
-    }
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-    .list { list-style: none; padding-left: 0; margin: 0; }
-    .list li { padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px; background: rgba(255,255,255,0.02); margin-bottom: 10px; }
-    .list small { color: var(--muted); }
-
-    .pill-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-    .pill-links a { border: 1px solid var(--border); border-radius: 999px; padding: 8px 12px; background: rgba(255,255,255,0.02); font-size: 14px; color: var(--text); }
-
-    footer { padding: 40px 0 60px; color: var(--muted); text-align: center; }
-  </style>
+  <!-- =======================================================
+  * Template Name: Laura - v2.0.0
+  * Template URL: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
+
 <body>
 
-  
-  <header class="site">
-    <div class="wrap nav">
-      <div class="brand">Zhao-Qing Lin</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  d-flex justify-content-center align-items-center">
 
-<main class="wrap">
-  <section class="hero" id="top">
-    <div class="hero-card">
-      <div class="hero-grid">
-        <div class="hero-text">
-        <h1>Hi, I’m Zhao-Qing Lin</h1>
-        <p>You can call me Qing</p>
-        <p>Physics student in fundamental physics from theory to experiment</p>
-        <div class="badges">
-          <span class="badge">Amsterdam, the Netherlands</span>
-          <span class="badge">Open to PhD position</span>
-          <span class="badge">Email: you@example.com</span>
-        </div>
-        <div class="pill-links">
-          <a href="#projects">See projects</a>
-          <a href="#cv">Download CV</a>
-          <a href="#contact">Get in touch</a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <img src="assets/profile.jpg" alt="Portrait of Zhao-Qing Lin" loading="lazy" width="780" height="624" />
-      </div>
-    </div>
-  </div>
-</section>
-      
-    </section>
-
-    <section id="about">
-      <h2>About</h2>
-      <div class="card">
-        <p>
-          I am a physics student with broad research background from theory to instrumental physics. My research topics include Beyond Standard Model physics, Gravitatioanl Waves instrument in low frequency science, atomic physics and cosmology. I am deeply familiar with data analysis, DAQ system, electronic simulations, and quantum theory.  
-        </p>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="card thirds">
-          <h3>Project One</h3>
-          <p>One-liner about the goal and your role. <a href="#">Paper/code/demo →</a></p>
-        </article>
-        <article class="card thirds">
-          <h3>Project Two</h3>
-          <p>Key result or artifact. <a href="#">Read more →</a></p>
-        </article>
-        <article class="card thirds">
-          <h3>Project Three</h3>
-          <p>Why it mattered; what changed. <a href="#">Details →</a></p>
-        </article>
-      </div>
-    </section>
-
-    <section id="publications">
-      <h2>Publications & Talks</h2>
-      <ul class="list">
-        <li>
-          <strong>Title of work</strong> — Authors. <em>Venue</em>, Year. <small><a href="#">PDF</a> • <a href="#">BibTeX</a></small>
-        </li>
-        <li>
-          <strong>Talk Name</strong> — Event, Year. <small><a href="#">Slides</a> • <a href="#">Video</a></small>
-        </li>
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li class="active"><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#services">Events</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </section>
+    </nav><!-- .nav-menu -->
 
-    <section id="cv">
-      <h2>CV</h2>
-      <div class="card halves">
-        <p>Keep an online snapshot and a downloadable PDF.</p>
-        <div class="pill-links">
-          <a href="cv.pdf">Download CV (PDF)</a>
-          <a href="#">Short bio</a>
-          <a href="#">Google Scholar / ORCID</a>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Dr. Mengqing Wu.</h1>
+      <h2>A full-stack data scientist in high energy physics.</h2>
+      <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Me Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <span>About Me</span>
+          <h2>About Me</h2>
+          <p><a href="files/cv.pdf" class="btn-cv">Download My CV <span class="ion-ios-arrow-forward"></span></a></p>
         </div>
+
+        <div class="row">
+          <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+          <div class="col-lg-8 d-flex flex-column align-items-stretch">
+            <div class="content pl-lg-4 d-flex flex-column justify-content-center">
+              <!-- <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="icofont-rounded-right"></i> <strong>Name:</strong> Laura Thomson</li>
+                    <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.example.com</li>
+                    <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +123 456 7890</li>
+                    <li><i class="icofont-rounded-right"></i> <strong>City:</strong> City : New York, USA</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 30</li>
+                    <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Master</li>
+                    <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> email@example.com</li>
+                    <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
+                  </ul>
+                </div>
+              </div> -->
+              <div class="row mt-n4">
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="icofont-paper" style="color: #20b38e;"></i>
+                    <span data-toggle="counter-up">17</span>
+                    <p><strong>Journal Publications</strong> as the major author.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="icofont-presentation" style="color: #8a1ac2;"></i>
+                    <span data-toggle="counter-up">24</span>
+                    <p><strong>Presentations</strong> for international conferences and invited seminars</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="icofont-clock-time" style="color: #2cbdee;"></i>
+                    <span data-toggle="counter-up">8</span>
+                    <p><strong>Years of experience</strong> in computing and big data engineering/scientist/analysis </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="icofont-award" style="color: #ffb459;"></i>
+                    <span data-toggle="counter-up">9</span>
+                    <p><strong>Professional Awards</strong> </p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+
+            <div class="skills-content pl-lg-4">
+              <div class="progress">
+                <span class="skill">Data engineering/scientist/analysis <i class="val">100%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">C/C++ <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Python <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Software Development/Architecture <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">HTML/CSS/JavaScript <i class="val">60%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          </div>
+        </div>
+
       </div>
-    </section>
+    </section><!-- End About Me Section -->
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>Email: <a href="mailto:you@example.com">you@example.com</a> · GitHub: <a href="https://github.com/your-username">@your-username</a> · LinkedIn: <a href="#">Profile</a></p>
+    <!-- ======= My Resume Section ======= -->
+    <section id="experience" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Experience</span>
+          <h2>Experience</h2>
+          <p>&#169;My Professional Experience</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+
+            <h3 class="resume-title">Dr. Mengqing Wu</h3>
+            <div class="resume-item pb-0">
+              <h4></h4>
+              <p><em> A quadrilingual (CN, EN, FR, DE) assistant professor
+                <!-- with 8+ years of experience designing
+                and developing user-centered digital/print marketing material from initial concept to final, polished deliverable. -->
+              </em></p>
+              <p>
+              <ul>
+                <li>Based in Nijmegen, Netherlands.</li>
+              </ul>
+              </p>
+            </div>
+
+            <h3 class="resume-title">CERN</h3>
+            <div class="resume-item">
+              <h4> Associate Researcher @ ATLAS</h4>
+              <h5>Sep 2020 - Present</h5>
+              <p><em>European Organization for Nuclear Research, Geneva, CH</em></p>
+              <p>
+                <ul>
+                  <li> ATLAS TDAQ efforts.</li>
+                </ul>
+              </p>
+            </div>
+
+            <div class="resume-item">
+              <h4>Employed Postdoc Researcher @ AIDA2020</h4>
+              <h5>Apr 2017 - Aug 2020</h5>
+              <p><em>European Organization for Nuclear Research, Geneva, CH</em></p>
+              <p>
+                <ul>
+                  <li> Joint position with DESY.</li>
+                </ul>
+              </p>
+            </div>
+
+            <div class="resume-item">
+              <h4>Associate Postdoc Researcher @ CMS</h4>
+              <h5>Oct 2015 - Mar 2017</h5>
+              <p><em>European Organization for Nuclear Research, Geneva, CH</em></p>
+              <p>
+                <ul>
+                  <li> Lead efforts to probe new physics at energy frontier;</li>
+                  <li> Convener for software validation of the CMS software framework (CMSSW);</li>
+                  <li> Develop data analysis frameworks in Python &amp; deploy batch system computing.</li>
+                </ul>
+              </p>
+            </div>
+
+            <div class="resume-item">
+              <h4>Associate PhD Researcher @ ATLAS</h4>
+              <h5>Sep 2012 - Sep 2015</h5>
+              <p><em>European Organization for Nuclear Research, Geneva, CH</em></p>
+              <p>
+              <ul>
+                <li>Member of ATLAS-CMS DM Forum / LHC Dark Matter Working Group; </li>
+                <li>Lead efforts in software validation for the ATLAS software framework (ATHENA);</li>
+                <li>Develop C++ frameworks for statistical data analysis &amp; deploy grid computing (WLCG).</li>
+              </ul>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <h3 class="resume-title">Radboud University</h3>
+            <div class="resume-item">
+              <h4>Assistant Professor</h4>
+              <h5>Sep 2020 - Present</h5>
+              <p><em>Radboud University Nijmegen, NL </em></p>
+              <p>
+              <ul>
+                <li> Research interests focused on hardware in high energy physics, but also in software and physics anlaysis;</li>
+                <li> Teaching starts soon on detector physics;</li>
+                <li> Students supervision: looking for enthusiastic graduate students to join on board.</li>
+              </ul>
+              </p>
+            </div>
+
+            <h3 class="resume-title">DESY</h3>
+            <div class="resume-item">
+              <h4>Project Scientist</h4>
+              <h5>Apr 2017 - Aug 2020</h5>
+              <p><em>Deutsches Elektronen Synchrotron, Hamburg, DE </em></p>
+              <p>
+              <ul>
+                <li>Project leader to build one novel silicon detector system (LYCORIS), and one slow control system (TBSC) for DESY II test beam users;</li>
+                <li>Responsible for the software development from DAQ to analysis:</li>
+                <ul>
+                  <li>TCP/IP network software and Graphic user interface development;</li>
+                  <li>Integration frameworks and database definition.</li>
+                </ul>
+                <li>Supervise numerous graduate students and interns.</li>
+              </ul>
+              </p>
+            </div>
+
+            <h3 class="resume-title">IHEP</h3>
+            <div class="resume-item">
+              <h4>Postdoc Researcher</h4>
+              <h5>Oct 2015 - Mar 2017</h5>
+              <p><em>Institute of High Energy Physics, Beijing, CN</em></p>
+              <p>
+              <ul>
+                <li> "Chung-Yao Chao" research fellow by CAS Center for Excellence in Particle Physics;</li>
+                <li> 100% based @ CERN to lead research efforts.</li>
+              </ul>
+              </p>
+            </div>
+
+            <h3 class="resume-title">LPSC</h3>
+            <div class="resume-item">
+              <h4>Research Assistant</h4>
+              <h5>Sep 2012 - Sep 2015</h5>
+              <p><em>Laboratory of Subatomic Physics &amp; Cosmology, Grenoble, FR</em></p>
+              <p>
+              <ul>
+                <!-- <li>Managed up to 5 projects or tasks at a given time while under pressure</li> -->
+                <li>Frequently travel to CERN for meetings and discussions;</li>
+                <li>Co-supervise interns.</li>
+              </ul>
+              </p>
+            </div>
+
+          </div>
+
+        </div><!-- row -->
+
       </div>
-    </section>
-  </main>
+    </section><!-- End My Resume Section -->
 
-  <footer>
-    <div class="wrap">© <span id="y"></span> Your Name. Built with GitHub Pages.</div>
-  </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+    <!-- ======= My Resume Section ======= -->
+    <section id="publications" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Publications</span>
+          <h2>Publications &amp; Presentations</h2>
+          <p>Proceedings, journal papers &amp; Conferences, Workshops, Seminars</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Recent Publications &#9997;</h3>
+            <div class="resume-item pb-0">
+              <h5>Apr 2020</h5>
+              <p>Development of a large active area beam telescope based on the SiD microstrip sensor
+                  <a href="https://doi.org/10.1016/j.nima.2019.162864">10.1016/j.nima.2019.162864</a>
+              </p>
+
+              <h5>Jan 2020</h5>
+              <p>Dark Matter benchmark models for early LHC Run-2 Searches: Report of the ATLAS/CMS Dark Matter Forum
+                  <a href="https://doi.org/10.1016/j.dark.2019.100371">10.1016/j.dark.2019.100371</a>
+              </p>
+
+              <h5>Oct 2019</h5>
+              <p>EUDAQ2—A flexible data acquisition software framework for common test beams
+                  <a href="https://iopscience.iop.org/article/10.1088/1748-0221/14/10/P10033">10.1088/1748- 0221/14/10/P10033</a>
+              </p>
+
+              <h5>Sep 2019</h5>
+              <p>Lycoris: A large area beam telescope based on hybrid-less strip silicon sensors
+                <a href="https://doi.org/10.1109/NSSMIC.2018.8824667">10.1109/NSSMIC.2018.8824667</a>
+              </p>
+
+              <h5>Jan 2018</h5>
+              <p>LYCORIS - A Large Area Strip Telescope
+                <a href="">arXiv: 1801.08505[physics.ins-det]</a>
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <h3 class="resume-title">Recent Presentations &#9786;</h3>
+
+            <div class="resume-item">
+              <h4><a href="https://vci2019.hephy.at/home/">VCI Vienna Conference on Instrumentation</a></h4>
+              <h5>18-22 Feb 2019</h5>
+              <p><em>Vienna University of Technology, Vienna, AT</em></p>
+              <p>Development of a large active area beam telescope based on the SiD micro-strip sensor</p>
+            </div>
+
+            <div class="resume-item">
+              <h4><a href="http://www.nssmic.org/2018/?s=nss-program-topics">IEEE MIC-NSS</a></h4>
+              <h5>10-17 Nov 2018</h5>
+              <p><em>International Convention Centre Sydney, Sydney, AU</em></p>
+              <p>LYCORIS: A large area beam telescope based on hybrid-less strip silicon sensor</p>
+            </div>
+
+            <div class="resume-item">
+              <h4><a href="https://agenda.linearcollider.org/event/7826/">Asian Linear Collider Workshop</a></h4>
+              <h5>28 May - 1 Jun 2018</h5>
+              <p><em>Fukuoka International Congress Center, Fukuoka, JP</em></p>
+              <p>LYCORIS, a large area strip telescope for the DESY test beam</p>
+            </div>
+
+            <div class="resume-item">
+              <h4><a href="https://www.physik.uzh.ch/qcdatlhc/">QCD@LHC</a></h4>
+              <h5>22-26 Aug 2016</h5>
+              <p><em>University of Zurich, Zurich, CH</em></p>
+              <p>Experimental results on di-photon, ZZ and WW resonances from ATLAS and CMS</p>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- End My Resume Section -->
+
+
+
+
+    <!-- ======= My Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Upcoming Events</span>
+          <h2>Upcoming Events</h2>
+          <!-- <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> -->
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-calendar-week"></i></div>
+              <h4 class="title"><a href="https://nssmic.ieee.org/2020/">IEEE MIC-NSS</a></h4>
+              <h4 class="subtitle"> 31 Oct - 7 Nov 2020 </h4>
+              <p class="description">One of the top conferences in the field is the annual IEEE MIC-NSS, the next one shall be held in Boston.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-calendar-week"></i></div>
+              <h4 class="title"><a href="https://indico.cern.ch/event/858784/">AIDA2020 Final Meeting</a></h4>
+              <h4 class="subtitle"> 29 - 30 Apr 2020 </h4>
+              <p class="description">AIDA2020 is approaching the end of its funding cycle, discussions are ongoing not only to wrap it up, but also for a successor.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-calendar-week"></i></div>
+              <h4 class="title"><a href="https://indico.cern.ch/event/882374/">CERN Seminar</a></h4>
+              <h4 class="subtitle"> 15:00, 1 Apr 2020  </h4>
+              <p class="description">Latest CERN-EP/IT Data science seminar via Zoom - "Uncertainty Quantification in Ill-Posed Inverse Problems: Case Studies in the Physical Sciences".</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-refresh"></i></div>
+              <h4 class="title"><a href="https://sites.google.com/view/tsings-blog">Tech Blog</a></h4>
+              <h4 class="subtitle"> Updated 04 May 2020  </h4>
+              <p class="description">My personal tech blog - stay tuned.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End My Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <!-- <section id="testimonials" class="testimonials">
+      <div class="container">
+
+        <div class="owl-carousel testimonials-carousel">
+
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+            <h3>Saul Goodman</h3>
+            <h4>Ceo &amp; Founder</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <h3>Sara Wilsson</h3>
+            <h4>Designer</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+            <h3>Jena Karlis</h3>
+            <h4>Store Owner</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <h3>Matt Brandon</h3>
+            <h4>Freelancer</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <h3>John Larson</h3>
+            <h4>Entrepreneur</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Testimonials Section -->
+
+    <!-- ======= My Portfolio Section ======= -->
+    <section id="projects" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Projects</span>
+          <h2>Projects</h2>
+          <p>Various professional projects, but also life projects.</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-center">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-hw">hw</li>
+          <li data-filter=".filter-sw">sw</li>
+          <li data-filter=".filter-exp">exp</li>
+          <li data-filter=".filter-life">life</li>
+        </ul>
+
+        <div class="row portfolio-container">
+
+          <!-- hw -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-hw">
+            <div class="portfolio-img"><img src="assets/img/portfolio/lycoris.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Lycoris telescope</h4>
+              <p>Silicon Detector System</p>
+              <a href="assets/img/portfolio/lycoris.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Silicon Detector System"><i class="bx bx-plus"></i></a>
+              <a href="https://cds.cern.ch/record/2666480/files/AIDA-2020-SLIDE-2019-004.pdf" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-hw">
+            <div class="portfolio-img"><img src="assets/img/portfolio/slowcontrol.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Slow Control System</h4>
+              <p>Non time-critical setup & monitoring</p>
+              <a href="assets/img/portfolio/slowcontrol.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Slow Control System"><i class="bx bx-plus"></i></a>
+              <a href="http://aida2020.web.cern.ch/content/take-it-slow-monitoring-desy" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <!-- sw -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sw">
+            <div class="portfolio-img"><img src="assets/img/portfolio/eudaq.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>EUDAQ2</h4>
+              <p>Common data acquisition software</p>
+              <a href="assets/img/portfolio/eudaq.png" data-gall="portfolioGallery" class="venobox preview-link" title="EUDAQ2"><i class="bx bx-plus"></i></a>
+              <a href="https://github.com/eudaq/eudaq" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sw">
+            <div class="portfolio-img"><img src="assets/img/portfolio/ppd.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>PPD@CMS</h4>
+              <p>Physics Performance and Dataset</p>
+              <a href="assets/img/portfolio/ppd.png" data-gall="portfolioGallery" class="venobox preview-link" title="PPD@CMS"><i class="bx bx-plus"></i></a>
+              <a href="http://cms.web.cern.ch/news/new-physics-performance-and-dataset-group-cms" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sw">
+            <div class="portfolio-img"><img src="assets/img/portfolio/lycoris-sw.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Lycoris Software Stack</h4>
+              <p>From DAQ to event reconstruction </p>
+              <a href="assets/img/portfolio/lycoris-sw.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="lycoris-sw"><i class="bx bx-plus"></i></a>
+              <a href="https://github.com/Lycoris2017" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <!-- exp -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-exp">
+            <div class="portfolio-img"><img src="assets/img/portfolio/atlas-cad.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>New Physics@ATLAS</h4>
+              <p>Dark matter and supersymmetry</p>
+              <a href="assets/img/portfolio/atlas-cad.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="atlas"><i class="bx bx-plus"></i></a>
+              <a href="https://cds.cern.ch/record/2054422/files/ATL-PHYS-SLIDE-2015-714.pdf" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-exp">
+            <div class="portfolio-img"><img src="assets/img/portfolio/cms-det.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>New Physics@CMS</h4>
+              <p>New mass resonance at energy frontier</p>
+              <a href="assets/img/portfolio/cms-det.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="cms-det"><i class="bx bx-plus"></i></a>
+              <a href="https://indico.cern.ch/event/516210/contributions/2238274/attachments/1325805/1990187/Mengqing_QCDLHC2016_EWK_resonance.pdf" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-exp">
+            <div class="portfolio-img"><img src="assets/img/portfolio/cern-guide.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Official Guide@CERN</h4>
+              <p>Scientific outreach</p>
+              <a href="assets/img/portfolio/cern-guide.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="cern guide"><i class="bx bx-plus"></i></a>
+              <a href="https://visit.cern/" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+
+          <!-- life -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-life">
+            <div class="portfolio-img"><img src="assets/img/portfolio/painting-0.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Tulip Field</h4>
+              <p>Acrylic painting self-learner</p>
+              <a href="assets/img/portfolio/painting-0.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="tulip field"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-life">
+            <div class="portfolio-img"><img src="assets/img/portfolio/painting-1.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Lavender Field at Alpes</h4>
+              <p>Acrylic painting self-learner</p>
+              <a href="assets/img/portfolio/painting-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="lavender field"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-life">
+            <div class="portfolio-img"><img src="assets/img/portfolio/photography.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>A part-time photographer</h4>
+              <p>Donation welcomed for a proper camera</p>
+              <a href="assets/img/portfolio/photography.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="sunshine through leaves"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-life  ">
+            <div class="portfolio-img"><img src="assets/img/portfolio/badminton.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Badminton lover</h4>
+              <p>But not good at it</p>
+              <a href="assets/img/portfolio/badminton.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="badminton competition"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-life  ">
+            <div class="portfolio-img"><img src="assets/img/portfolio/horse-riding.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Horse-back riding</h4>
+              <p>They are smart and lovely</p>
+              <a href="assets/img/portfolio/horse-riding.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="https://www.hamburg-lodge.com/activities/Hamburg-Sports/Horse-Riding/" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End My Portfolio Section -->
+
+
+
+
+    <!-- ======= Contact Me Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Contact Me</span>
+          <h2>Contact Me</h2>
+          <!-- <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> -->
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-share-alt"></i>
+                  <h3>Social Profiles</h3>
+                  <p>Send me a message via any social platform</p>
+
+                  <div class="social-links">
+                    <a href="https://github.com/MengqingWu"><i class="icofont-github"></i></a>
+                    <a href="https://sites.google.com/view/tsings-blog"><i class="icofont-blogger"></i></a>
+                  </div>
+
+                  <div class="social-links">
+                    <a href="https://www.facebook.com/wumengtsing" class="facebook"><i class="icofont-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/mengqingwu/" class="linkedin"><i class="icofont-linkedin"></i></a>
+                    <a href="https://www.xing.com/profile/Mengqing_Wu/cv" class="linkedin"><i class="icofont-xing"></i></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2369.1907683466266!2d9.881109516262068!3d53.57221186546935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18432319c54af%3A0x3952ed73e492578f!2sGerman%20Electron%20Synchrotron%20DESY!5e0!3m2!1sen!2sde!4v1588191392702!5m2!1sen!2sde"
+          width="600" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+
+          <!-- <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="6" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div> -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Me Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>MW</h3>
+      <!-- <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> -->
+      <div class="social-links">
+        <a href="https://github.com/MengqingWu"><i class="icofont-github"></i></a>
+        <a href="https://www.facebook.com/wumengtsing" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/mengqingwu/" class="linkedin"><i class="icofont-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Mengqing_Wu/cv" class="linkedin"><i class="icofont-xing"></i></a>
+        <a href="https://sites.google.com/view/tsings-blog"><i class="icofont-blogger"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Laura</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
